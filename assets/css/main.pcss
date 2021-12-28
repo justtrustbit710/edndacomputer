@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* If you need to let Tailwind classes overwrite your own classes, they need to be beneath this */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;900&family=Montserrat:wght@300&family=Poppins:wght@200;600;700&display=swap');
+
+@layer base {
+  button {
+    @apply h-12 grow transition-colors duration-150 border border-blue-500 rounded-l-lg hover:bg-blue-700 hover:text-white;
+  }
+
+  h1 {
+    @apply text-4xl text-blue-800 font-montserrat text-center;
+    &:hover {
+      @apply text-white;
+    }
+  }
+
+  h2 {
+    @apply text-2xl text-blue-500 font-montserrat text-center;
+  }
+
+  h3 {
+    @apply text-sm uppercase font-poppins text-gray-800 text-center;
+  }
+}
+
+@layer components {
+  .black-out {
+    @apply font-bold text-black;
+  }
+
+  .link-hero {
+    @apply inline-block max-w-lg font-sans text-3xl font-extrabold leading-none tracking-tight text-black transition-colors duration-200 sm:text-4xl hover:text-purple-700;
+  }
+
+  .link {
+    @apply font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-400;
+  }
+}
